@@ -26,7 +26,8 @@ export default function RootLayout() {
         <Stack.Screen name="home"/>
          <Stack.Screen name="profile"/>
          <Stack.Screen name="addmoney"/>
-    
+          <Stack.Screen name="sendmoney"/>
+         <Stack.Screen name="success"/>
 
 
 

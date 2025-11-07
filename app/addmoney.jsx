@@ -2,15 +2,15 @@ import { Ionicons } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
 import { useState } from 'react';
 import {
-    Alert,
-    KeyboardAvoidingView,
-    Platform,
-    ScrollView,
-    StyleSheet,
-    Text,
-    TextInput,
-    TouchableOpacity,
-    View,
+  Alert,
+  KeyboardAvoidingView,
+  Platform,
+  ScrollView,
+  StyleSheet,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  View,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
@@ -22,7 +22,7 @@ const AddMoneyScreen = () => {
   const [amount, setAmount] = useState('');
   const [selectedMethod, setSelectedMethod] = useState('');
 
-  // Payment methods
+  
   const paymentMethods = [
     { id: '1', name: 'Bank Transfer', icon: 'business-outline' },
     { id: '2', name: 'Debit Card', icon: 'card-outline' },
@@ -30,10 +30,10 @@ const AddMoneyScreen = () => {
     { id: '4', name: 'Quickteller', icon: 'flash-outline' },
   ];
 
-  // Quick amount buttons
+
   const quickAmounts = ['₦1,000', '₦2,000', '₦5,000', '₦10,000'];
 
-  // Function to handle add money
+  
   const handleAddMoney = () => {
     if (!amount) {
       Alert.alert('Error', 'Please enter an amount');
@@ -45,7 +45,7 @@ const AddMoneyScreen = () => {
       return;
     }
 
-    // Show success message
+    
     Alert.alert(
       'Success!',
       `₦${amount} added to your wallet successfully!`,
@@ -58,9 +58,9 @@ const AddMoneyScreen = () => {
     );
   };
 
-  // Function to handle quick amount selection
+  
   const handleQuickAmount = (quickAmount) => {
-    // Remove the '₦' and commas, then set the amount
+   
     const cleanAmount = quickAmount.replace('₦', '').replace(',', '');
     setAmount(cleanAmount);
   };
@@ -72,7 +72,7 @@ const AddMoneyScreen = () => {
         style={styles.keyboardView}
       >
         
-        {/* Header */}
+        
         <View style={styles.header}>
           <TouchableOpacity 
             onPress={() => navigation.goBack()}
@@ -86,7 +86,7 @@ const AddMoneyScreen = () => {
 
         <ScrollView style={styles.scrollView} showsVerticalScrollIndicator={false}>
           
-          {/* Amount Input Section */}
+          
           <View style={styles.amountSection}>
             <Text style={styles.amountLabel}>Enter Amount</Text>
             
@@ -102,7 +102,7 @@ const AddMoneyScreen = () => {
               />
             </View>
 
-            {/* Quick Amount Buttons */}
+           
             <Text style={styles.quickAmountLabel}>Quick Select</Text>
             <View style={styles.quickAmounts}>
               {quickAmounts.map((quickAmount, index) => (
@@ -117,7 +117,7 @@ const AddMoneyScreen = () => {
             </View>
           </View>
 
-          {/* Payment Methods Section */}
+         
           <View style={styles.methodsSection}>
             <Text style={styles.sectionTitle}>Choose Payment Method</Text>
             
@@ -151,7 +151,7 @@ const AddMoneyScreen = () => {
             ))}
           </View>
 
-          {/* Info Section */}
+          
           <View style={styles.infoBox}>
             <Ionicons name="information-circle-outline" size={20} color="#173356ff" />
             <Text style={styles.infoText}>
@@ -161,7 +161,7 @@ const AddMoneyScreen = () => {
 
         </ScrollView>
 
-        {/* Continue Button */}
+        
         <View style={styles.footer}>
           <TouchableOpacity 
             style={[

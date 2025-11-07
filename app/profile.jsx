@@ -242,7 +242,7 @@ const ProfileScreen = () => {
     <SafeAreaView style={styles.container}>
       <StatusBar barStyle="dark-content" backgroundColor="#ffffff" />
       
-      {/* Header */}
+     
       <View style={styles.header}>
         <TouchableOpacity 
           style={styles.backButton}
@@ -256,7 +256,7 @@ const ProfileScreen = () => {
 
       <ScrollView style={styles.content} showsVerticalScrollIndicator={false}>
         
-        {/* Profile Header */}
+        
         <View style={styles.profileHeader}>
           <View style={styles.avatarContainer}>
             <Image
@@ -277,7 +277,7 @@ const ProfileScreen = () => {
           </TouchableOpacity>
         </View>
 
-        {/* Account Info Cards */}
+     
         <View style={styles.infoCards}>
           <View style={styles.infoCard}>
             <Ionicons name="call-outline" size={20} color="#0b2f5c" />
@@ -304,7 +304,7 @@ const ProfileScreen = () => {
           </View>
         </View>
 
-        {/* Profile Sections */}
+        
         {profileSections.map((section, sectionIndex) => (
           <View key={sectionIndex} style={styles.section}>
             <Text style={styles.sectionTitle}>{section.title}</Text>
@@ -342,7 +342,7 @@ const ProfileScreen = () => {
           </View>
         ))}
 
-        {/* App Version */}
+       
         <View style={styles.versionContainer}>
           <Text style={styles.versionText}>PaddyPay v1.0.0</Text>
         </View>
